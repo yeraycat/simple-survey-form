@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Simple Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Simple Survey Form</h1>
+    </header>
+    <main>
+        <p id="description">Thanks for answering our survey!</p>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" required placeholder="Enter your full name"/>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" required placeholder="mail@example.com" />    
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Which is your favorite number</label>
+                <input type="number" id="number" max="1000" min="0" required placeholder="from 0 to 1000" />    
+            </div>
+            <div class="form-group">
+                <label id="dropdown-label" for="dropdown">Which is the color of your eyes?</label>
+                <select id="dropdown">
+                    <option value="brown">Brown</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="grey">Grey</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="radio">Yes or no?</label>
+                <input type="radio" name="radio" value="yes" /> Yes 
+                <input type="radio" name="radio" value="no" /> No 
+            </div>
+            <div class="form-group">
+                <label for="check">Please check the boxes if true</label>
+                <input type="checkbox" name="check" value="blind" /> Are you blind?
+                <input type="checkbox" name="check" value="colorblind" /> Are you color-blind?
+                <input type="checkbox" name="check" value="blond" /> Are you blond?
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional comments</label>
+                <textarea id="comments"></textarea>
+            </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
