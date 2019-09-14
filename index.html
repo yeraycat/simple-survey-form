@@ -4,54 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Simple Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Website Quoter</title>
 </head>
 <body>
     <header>
-        <h1 id="title">Simple Survey Form</h1>
+        <h1 id="title">Website Quoter</h1>
     </header>
     <main>
-        <p id="description">Thanks for answering our survey!</p>
+        <p id="description">Welcome! Here you can input the requirements for your project. After that we'll process your submission and give you a quote for developing your website.</p>
         <form id="survey-form">
-            <div class="form-group">
-                <label id="name-label" for="name">Name</label>
-                <input type="text" id="name" required placeholder="Enter your full name"/>
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <div class="input-wrapper"><input type="text" id="name" required placeholder="Enter your full name"/></div>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <div class="input-wrapper"><input type="email" id="email" required placeholder="mail@example.com" /></div>
+                </div>
             </div>
-            <div class="form-group">
-                <label id="email-label" for="email">Email</label>
-                <input type="email" id="email" required placeholder="mail@example.com" />    
+            <div class="form-row">
+                <div class="form-group">
+                        <label id="company-name-label" for="company-name">Company name</label>
+                        <div class="input-wrapper"><input type="text" id="company-name" placeholder="Optional"/></div>
+                </div>
             </div>
-            <div class="form-group">
-                <label id="number-label" for="number">Which is your favorite number</label>
-                <input type="number" id="number" max="1000" min="0" required placeholder="from 0 to 1000" />    
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="purpose">Which would be the main purpose of the website?</label>
+                    <div class="input-wrapper">
+                            <select id="dropdown">
+                                <option value="static">Display static information about my company</option>
+                                <option value="portfolio">Portfolio</option>
+                                <option value="blog">Blog / News / Magazine</option>
+                                <option value="product-catalog">Product Catalog</option>
+                                <option value="shop">Online Shop</option>
+                                <option value="wiki">Wiki</option>
+                                <option value="ticketing">Ticketing System</option>
+                                <option value="booking">Booking System</option>
+                                <option value="cusomer-portal">Customer Portal</option>
+                                <option value="streaming">Video Streaming Site</option>
+                                <option value="game">Online Game</option>
+                                <option value="gambling">Gambling Site</option>
+                                <option value="other">Other</option>
+                            </select>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label id="dropdown-label" for="dropdown">Which is the color of your eyes?</label>
-                <select id="dropdown">
-                    <option value="brown">Brown</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="grey">Grey</option>
-                    <option value="other">Other</option>
-                </select>
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="domain-label" for="domain">Do you need a domain name?</label>
+                    <div class="input-wrapper input-wrapper--left">
+                        <div class="radio-wrapper"><input type="radio" name="domain" value="yes" /> <span>Yes</span></div>
+                        <div class="radio-wrapper"><input type="radio" name="domain" value="no" /> <span>No</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="radio">Yes or no?</label>
-                <input type="radio" name="radio" value="yes" /> Yes 
-                <input type="radio" name="radio" value="no" /> No 
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ssl">Do you want a SSL certificate and HTTPS support?</label>
+                    <div class="input-wrapper input-wrapper--left">
+                        <div class="radio-wrapper"><input type="radio" name="ssl" value="yes" /> <span>Yes</span></div>
+                        <div class="radio-wrapper"><input type="radio" name="ssl" value="no" /> <span>No</span></div>
+                    </div>
+                    <span>We strictly recommend to choose <strong>Yes</strong>. A free Let's Encrypt certificate will be setup, so it won't affect the price.</span>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="check">Please check the boxes if true</label>
-                <input type="checkbox" name="check" value="blind" /> Are you blind?
-                <input type="checkbox" name="check" value="colorblind" /> Are you color-blind?
-                <input type="checkbox" name="check" value="blond" /> Are you blond?
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="features-label" for="features">Do you want any extra features from other type of applications besides the chosen one?</label>
+                    <div class="input-wrapper">
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="static" /> <span>Static pages</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="blog" /> <span>Blog</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="portfolio" /> <span>Portfolio</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="product-catalog" /> <span>Product Catalog</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="shop" /> <span>Online Shop</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="cusomer-portal" /> <span>Customer Portal</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="booking-system" /> <span>Booking System</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="ticketing-system" /> <span>Ticketing System</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="wiki" /> <span>Wiki</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="browser-game" /> <span>Browser Game</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="video-streaming" /> <span>Video streaming site</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="gambling" /> <span>Gambling site</span></div>
+                        <div class="checkbox-wrapper"><input type="checkbox" name="features" value="other" /> <span>Other</span></div>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="form-group">
-                <label for="comments">Additional comments</label>
-                <textarea id="comments"></textarea>
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="number-label" for="number">How many templates needs your site?</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="number" max="30" min="1" required placeholder="from 1 to +30" />    
+                    </div>
+                </div>
             </div>
-            <button id="submit" type="submit">Submit</button>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="comments">Additional comments</label>
+                    <div class="input-wrapper">
+                        <textarea id="comments"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </div>
         </form>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
