@@ -83,6 +83,15 @@ select {
     padding: 11px;
 }
 
+textarea {
+    width: 100%;
+    padding: 11px;
+}
+
+input:invalid {
+    box-shadow: #B0664C 0px 0px 1.5px 3px;
+}
+
 button {
     padding: 11px;
     background-color: #F3A94A;
