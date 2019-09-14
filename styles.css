@@ -88,7 +88,7 @@ textarea {
     padding: 11px;
 }
 
-input:invalid:not(:focus):not(:placeholder-shown) {
+input:invalid:not(output):-moz-ui-invalid {
     box-shadow: #B0664C 0px 0px 1.5px 3px;
 }
 
